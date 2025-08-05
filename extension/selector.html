@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Select Sources</title>
+<style>
+body { font-family: Arial, sans-serif; }
+#tabs { display: flex; overflow-x: auto; width: 360px; }
+.tab-preview { margin: 4px; border: 2px solid transparent; cursor: pointer; }
+.tab-preview.selected { border-color: blue; }
+#devices { margin-top: 10px; }
+</style>
+</head>
+<body>
+<h3>Select Tab</h3>
+<div id="tabs"></div>
+<h3>Select Microphone</h3>
+<select id="deviceSelect"></select>
+<div>
+<label><input type="checkbox" id="autoSave"> Auto save without prompt</label>
+</div>
+<div>
+<label>Folder (optional): <input type="text" id="folder" placeholder="MeetingRecords" /></label>
+</div>
+<button id="confirm">Confirm</button>
+<script src="selector.js"></script>
+</body>
+</html>

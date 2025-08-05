@@ -1,0 +1,21 @@
+{
+  "name": "Meeting Recorder",
+  "description": "Record audio from selected tab and microphone to MP3.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["tabCapture", "downloads", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["overlay.css"]
+    }
+  ],
+  "action": {
+    "default_title": "Meeting Recorder"
+  }
+}
